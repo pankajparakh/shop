@@ -57,7 +57,10 @@
                 alert('Please enter both your name and email.');
                 return;
             }
-
+            fbq('init', '12802394758165', {
+                autoConfig: true,
+                em: true // Enables automatic advanced matching for email, phone, and other fields
+            });
             // Trigger Facebook Pixel AddToCart event with user data
             fbq('track', 'AddToCart', {
                 content_name: 'Test Product',
